@@ -1,0 +1,12 @@
+name: PuMuKIT workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: trusty
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Hello world!
+        run: echo "Hello world!" from ${{ github.workflow }} triggered by the ${{ github.event_name }} done by ${{ github.actor }}"
